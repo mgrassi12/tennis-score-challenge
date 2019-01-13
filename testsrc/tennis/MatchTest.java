@@ -112,7 +112,7 @@ public class MatchTest {
     public void shouldShowSetWinAfterSixGameWinsAndMoreThanTwoGameWinsApart() {
         Match match = new Match("player 1", "player 2");
         winGames(match, 6, "player 1");
-        Assert.assertEquals("The game has concluded.", match.score());
+        Assert.assertEquals("The game has concluded. player 1 is the winner.", match.score());
         Assert.assertEquals(6, match.getSet().getCurrentGameNo());
     }
 
@@ -132,7 +132,7 @@ public class MatchTest {
         winGames(match, 5, "player 1");
         winGames(match, 5, "player 2");
         winGames(match, 2, "player 1");
-        Assert.assertEquals("The game has concluded.", match.score());
+        Assert.assertEquals("The game has concluded. player 1 is the winner.", match.score());
         Assert.assertEquals(12, match.getSet().getCurrentGameNo());
     }
 
@@ -156,7 +156,7 @@ public class MatchTest {
         winGames(match, 1, "player 1");
         winPoints(match, 5, "player 1");
         winPoints(match, 7, "player 2");
-        Assert.assertEquals("The game has concluded.", match.score());
+        Assert.assertEquals("The game has concluded. player 2 is the winner.", match.score());
         Assert.assertEquals(13, match.getSet().getCurrentGameNo());
     }
 
@@ -171,7 +171,7 @@ public class MatchTest {
         winPoints(match, 7, "player 2");
         winPoints(match, 2, "player 1");
         winPoints(match, 3, "player 2");
-        Assert.assertEquals("The game has concluded.", match.score());
+        Assert.assertEquals("The game has concluded. player 2 is the winner.", match.score());
         Assert.assertEquals(13, match.getSet().getCurrentGameNo());
     }
 }

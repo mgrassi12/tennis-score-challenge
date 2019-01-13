@@ -53,8 +53,11 @@ public class Match {
 
         matchStatus = gameStatus + scoreStatus;
 
-        if (playerOne.getSetsWon() > 0 || playerTwo.getSetsWon() > 0) {
-            matchStatus = "The game has concluded.";
+        if (playerOne.getSetsWon() > 0) {
+            matchStatus = "The game has concluded. " + playerOne.getName() + " is the winner.";
+        }
+        if (playerTwo.getSetsWon() > 0) {
+            matchStatus = "The game has concluded. " + playerTwo.getName() + " is the winner.";
         }
 
         return matchStatus;
