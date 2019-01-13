@@ -1,4 +1,4 @@
-# Checkerboard Challenge
+# Tennis Scoring Challenge
 
 This is a simple Java program that scores a Tennis game to the specification of https://github.com/DiUS/coding-tests/blob/master/dius_tennis.md
 
@@ -6,9 +6,11 @@ This is a simple Java program that scores a Tennis game to the specification of 
 
 ### Prerequisites
 
-Please ensure you have v10.0.2 JRE and JDK installed on your machine to compile and run this project.
+Please ensure you have v10.0.2 JDK or equivalent installed on your machine to compile and run this project. You may also need to point your CLASSPATH to lib/ to get JUnit working.
 
 ## Example Input/Output
+
+Interact with the program via something like JShell.
 
 ~~~
 Match match = new Match("player 1", "player 2");
